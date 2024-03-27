@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+/* Header */
+header {
+  background-color: cornflowerblue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 1em;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav-container nav ul {
+  display: flex;
+}
+
+/* Footer */
+footer {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+
+/* Main Content */
+.main-image-container {
+  width: 100%;
+  height: 33vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url(Images/StudyDesk.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #616060;
+  padding: 1em;
+}
+
+.main-title {
+  margin: 0.5em 0;
+}
+
+.main-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-title a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* Blogs */
+.current-blog-container {
+  margin-top: 2em;
+}
+
+.blog-container {
+  max-width: 450px;
+  margin: 0 2em;
+  margin-top: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+.blog-image {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.blog-post-image {
+  width: 100%;
+  height: 33vh;
+  object-fit: cover;
+  margin: 2em 0;
+}
+
+.blog-title {
+  margin: 0.5em 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.recent-posts-title {
+  font-weight: 900;
+  color: red;
+  text-align: center;
+  margin: 2.5em 0 1.5em 0;
+}
+
+/* About Me */
+.profile-avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.profile-picture-container {
+  padding: 12px;
+}
+
+.aboutme-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.35em;
+}
+
+.aboutme-text {
+  margin-bottom: 2em;
+}
+
+.more-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.more-button {
+  border: none;
+  font-size: 1.1rem;
+  background-color: red;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.more-button:hover {
+  background-color: rgb(221, 2, 2);
+  box-shadow: 1px 1px 6px black;
+}
+
+.hidden {
+  position: absolute;
+  transform: translate(-100%);
+}
+
+.unhide {
+  position: relative;
+  transform: translate(0%);
+}
+
+/* Media Queries */
+@media (min-width: 700px) and (max-width: 999px) {
+  .all-blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .recent-posts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-image-text {
+    width: 700px;
+  }
+
+  .recent-posts-title {
+    margin: 2em auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .all-blog-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .main-image-text {
+    width: 700px;
+  }
+
+  .main-image-container {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .recent-posts-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  p,
+  h3,
+  .main-title {
+    max-width: 800px;
+    margin: 0.5em auto;
+  }
+
+  .profile-picture-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .recent-posts-title {
+    margin: 2em auto;
+  }
+
+  .profile-avatar {
+    margin-right: 1.5em;
+  }
+
+  .profile-text {
+    max-width: 800px;
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 699px) {
+  .title,
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .all-blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
